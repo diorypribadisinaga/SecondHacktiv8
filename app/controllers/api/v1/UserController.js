@@ -59,15 +59,14 @@ class UserController {
             })
             if (email.length == 0) return res.status(404).json({ msg: "Email Kosong" })
             if (!user) {
-                res.status(404).json({ msg: "Email Tidak Ditemukan" });
+                res.status(404).json({ msg: "Email atau Password salah" });
                 return;
             }
             if (password.length == 0) return res.status(404).json({ msg: "Password Kosong" })
             const isPasswordCorrect = this.verifyPassword(password, user.password);
 
             if (!isPasswordCorrect) {
-                console.log("Password Salah");
-                res.status(401).json({ msg: "Password Salah" });
+                res.status(401).json({ msg: "Email atau Password Salah" });
                 return;
             }
 
