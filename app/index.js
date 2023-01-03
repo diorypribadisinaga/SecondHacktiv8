@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors({credentials:true, origin: 
-    "http://localhost:3000",
+    "https://fesecondhand4.vercel.app",
 methods: ["GET", "POST","DELETE","PUT"]}))
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
