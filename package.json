@@ -7,12 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/www",
     "develop": "nodemon -q bin/www",
-    "db:create": "./node_modules/.bin/sequelize-cli db:create",
-    "db:drop": "./node_modules/.bin/sequelize-cli db:drop",
+    "db:create": "npx sequelize db:create",
+    "db:drop": "npx sequelize db:drop",
     "db:migrate": "npx sequelize db:migrate",
-    "db:rollback": "./node_modules/.bin/sequelize-cli db:migrate:undo",
-    "db:seed": "./node_modules/.bin/sequelize-cli db:seed:all",
-    "db:seed:undo:all": "./node_modules/.bin/sequelize-cli db:seed:undo:all"
+    "db:rollback": "npx sequelize db:migrate:undo",
+    "db:seed": "npx sequelize db:seed:all",
+    "db:seed:undo:all": "npx sequelize db:seed:undo:all"
   },
   "repository": {
     "type": "git",
